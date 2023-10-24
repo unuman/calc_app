@@ -14,11 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get(
-    '/controller/calcs/{num1}/{operator}/{num2}', //パラメータ「値1」「演算子」「値2」
+    '/calcs/{num1}/{operator}/{num2}', //パラメータ「値1」「演算子」「値2」
     [CalcController::class, 'result']  //コントローラー名はCalcController、アクション名はresult
 );
